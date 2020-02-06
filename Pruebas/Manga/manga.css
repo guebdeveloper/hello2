@@ -1,0 +1,365 @@
+.content {
+    display: grid;
+}
+
+
+/** MAIN MENU **/
+
+.main_menu {
+    display: flex;
+    height: 1.5rem;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+/*** MAIN MENU LOGO ***/
+
+.main_menu_logo {
+    display: flex;
+    height: 120%;
+    padding: 0.2rem 1rem;
+    align-content: center;
+}
+
+/*** MAIN MENU HB ***/
+
+.main_menu span {
+    display: flex;
+    align-content: center;
+    padding: 0 .5rem;
+}
+
+i {
+    font-family: byonicons, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/*** MAIN NAV ***/
+
+.main_menu_nav {
+    display: none;
+}
+.main_menu_nav_list {
+    display: flex;
+}
+.main_menu_nav_list li a{
+    display: flex;
+}
+.main_menu_nav_list a {
+    padding: 0.3rem .5rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+.main_menu_nav_list a:hover {
+    color: grey;
+}
+
+
+/** TEASER **/
+
+.teaser {
+    display: grid;
+    padding: .5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr;
+    grid-template-areas:
+    "logodate ."
+    "detail ."
+    "buttons .";
+    height: 10rem;
+    margin-top: 1rem;
+    background:linear-gradient(to right, black, rgba(207, 0, 0, 0.185)),  url("../images/Solo-Leveling-TICGN.jpg.webp") top 10% right 50%/cover;
+}
+
+.teaser p{
+    font-size: .4rem;
+    text-transform: capitalize;
+}
+
+.teaser h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.teaser .logodate {
+    grid-area: logodate;
+    align-self: flex-end;
+}
+
+.teaser .detail {
+    grid-area: detail;
+    font-size: .5rem;
+    align-self: center;
+}
+
+.teaser_play, .teaser_add_list {
+    background-color: rgba(51, 51, 51, 0.4);;
+    font-size: .7rem;
+    color: white;
+    padding: .1rem .7rem;
+    border: none;
+}
+
+/*** TEASER BUTONS ***/
+
+.teaser .buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teaser button{
+    border-radius: 3px;
+    font-size: .3rem;
+    padding: .2rem 1rem;
+    margin: 0 .5rem 0 0;
+    text-transform: capitalize;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+/** POPULARS **/
+
+.nav_populars, .nav_trending {
+    display: grid;
+    margin: .2rem 0;
+    justify-content: center;
+}
+
+.nav_populars h2,.nav_trending h2 {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    padding-bottom: .2rem;
+}
+
+.nav_populars_list, .nav_trending_list {
+    display: grid;
+    grid-auto-flow: column;
+    height: 9rem;
+    grid-gap: .5rem;
+    grid-auto-columns: 122px;
+    overflow: auto;
+    white-space: nowrap;
+    width: 95vw;
+}
+
+.nav_populars_list li, .nav_trending_list li{
+    display: grid;
+}
+
+.nav_populars_list li a, .nav_trending_list li a{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.nav_populars_list li button, .nav_trending_list li button{
+    font-size: .5rem;
+    background: red;
+    color: azure;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: .1rem;
+    padding: .1rem .3rem;
+    border-radius: 5px;
+}
+
+.nav_populars_list .np_item1 {background: url("../images/2686-tn921283.jpg") center/cover;}
+.nav_populars_list .np_item2 {background: url("../images/2686-tn921283.jpg") center/cover;}
+.nav_populars_list .np_item3 {background: url("../images/2686-tn921283.jpg") center/cover;}
+.nav_populars_list .np_item4 {background: url("../images/2686-tn921283.jpg") center/cover;}
+
+/** TRENDING **/
+
+.nav_trending_list .np_item1 {background: url("../images/Paper-Girls-Vol.-5-TPB-2018.jpg") center/cover;}
+.nav_trending_list .np_item2 {background: url("../images/Paper-Girls-Vol.-5-TPB-2018.jpg") center/cover;}
+.nav_trending_list .np_item3 {background: url("../images/Paper-Girls-Vol.-5-TPB-2018.jpg") center/cover;}
+.nav_trending_list .np_item4 {background: url("../images/Paper-Girls-Vol.-5-TPB-2018.jpg") center/cover;}
+
+/** FOOTER **/
+
+.main_footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main_footer > * {
+}
+
+.mf_redes {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    padding: .5rem 0;
+}
+.mf_redes a{
+    display: flex;
+    justify-content: space-around;
+}
+.mf_redes a img{
+    height: 1rem;
+    border-radius: 50%;
+    border: ivory solid 2px;
+}
+.mf_disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mf_disclaimer a {
+    font-size: .4rem;
+    text-transform: uppercase;
+    padding: .1rem;
+    border: ivory solid 1px;
+}
+.mf_contact_links {
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    .main_menu {
+        justify-content: stretch;
+    }
+    .main_menu_nav {
+        display: flex;
+    }
+    .main_menu span {
+        display: none;
+    }
+    .teaser {
+        height: 13rem;
+    }
+    .teaser h2{
+        font-size: 1.7rem;
+        padding-left: 1rem;
+    }
+    .teaser p{
+        font-size: .5rem;
+        padding-left: 1rem ;
+    }
+    .teaser .buttons {
+        padding-left: 1rem;
+    }
+    .teaser button{
+        font-size: .5rem;
+    }
+    .teaser button:hover {
+        background-color: cornsilk;
+        color: black;
+        transform: scale(110%);
+    }
+    .nav_populars_list, .nav_trending_list {
+        overflow: unset;
+        height: 5rem;
+        grid-auto-columns: 200px;
+    }
+
+    .nav_populars_list li a, .nav_trending_list li a{
+        justify-content: left;
+    }
+    .nav_populars_list li button, .nav_trending_list li button{
+        border-radius: 0;
+        margin-bottom: .3rem;
+        padding-left: .2rem;
+    }
+
+    .nav_populars_list li:hover, .nav_trending_list li:hover{
+        transform: scale(130%);
+        white-space: normal;
+        outline: black 2px solid;
+    }
+    .main_footer {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "redes"
+        "nav"
+        "disclaimer";
+        padding: .5rem 7rem;
+    }
+
+    .mf_redes {
+        grid-area: redes;
+        justify-content: left;
+    }
+
+    .mf_redes a img{
+        height: 1.5rem;
+        border: none;
+        padding: .1rem .3rem;
+    }
+    .mf_contact_links {
+        grid-area: nav;
+        display: grid;
+        align-items: center;
+    }
+
+    .mf_contact_links ul li {
+        font-size: .6rem;
+        text-transform: capitalize;
+        justify-content: space-between;
+        color: grey;
+        padding: .2rem;
+    }
+
+    .mf_contact_links ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .mf_disclaimer {
+        grid-area: disclaimer;
+        justify-content: left;
+    }
+    .mf_disclaimer a {
+        font-size: .6rem;
+        color: grey;
+        margin-top: .5rem;
+        padding: .1rem .3rem;
+    }
+}
+
+@media (min-width: 100rem) {
+    .main_menu {
+        display: flex;
+        height: 2.5rem;
+    
+    }
+    .teaser {
+        grid-template-columns: repeat(3, 1fr);
+        height: 25rem;
+    }
+    .teaser h2{
+        font-size: 3rem;
+    }
+    .teaser p{
+        font-size: .7rem;
+    }
+    .teaser .buttons {
+        align-items: flex-start;
+        padding-left: 2rem;
+    }
+    .teaser button{
+        font-size: 1rem;
+
+    }
+    .nav_populars_list, .nav_trending_list {
+        height: 6rem;
+        grid-auto-columns: 270px;
+        margin-bottom: 1rem;
+    }
+    .main_footer {
+        padding: .5rem 12rem;
+    }
+    
+}

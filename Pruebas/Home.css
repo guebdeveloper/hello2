@@ -1,0 +1,138 @@
+/** WRAPPER **/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+/*** TITLE ***/
+
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title a img {
+    height: 2rem;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: center;
+}
+
+/*** CONTAINER ***/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    justify-content: center;
+}
+
+.container div {
+    padding: .2rem;
+    flex: 1;
+}
+
+.container div a {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+.container div a img {
+    height: 90%;
+}
+
+.container h2 {
+    font-size: .6rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/*** FOOTER ***/
+
+.footer_redes {
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+    margin: 3rem 0 0;
+}
+
+.footer_redes a {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: .2rem 1rem;
+}
+
+.footer_redes img {
+    border: honeydew solid 2px;
+    border-radius: 100px;
+}
+
+.redes {
+    display: none;
+    font-style: italic;
+}
+
+@media (min-width: 40rem) {
+
+    .container > *:hover {
+        transform: scale(120%);
+        color: grey;
+    }
+
+    .title a img {
+        height: 3rem;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .container div a {
+        height: 200px;
+    }
+    .container h2 {
+        font-size: .7rem;
+    }
+    .footer_redes a {
+        height: 1.5rem;
+    }
+    .footer_redes a:hover {
+        background-color: ivory;
+        color: black;
+        border-radius: 100px;
+    }
+    .footer_redes a p {
+        font-size: 1rem;
+    }
+    .redes {
+        display: block;
+    }
+}
+
+@media (min-width: 80rem) {
+    .container {
+        margin-top: 1rem
+    }
+    .container div a {
+        height: 300px;
+    }
+}
+@media (min-width: 120rem) {
+}
